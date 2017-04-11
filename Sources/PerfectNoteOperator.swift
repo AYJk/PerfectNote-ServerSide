@@ -36,10 +36,11 @@ class UserOperator: BaseOperator {
     /// - Parameters:
     ///   - userName: 用户名
     ///   - password: 密码
+    ///   - sex: 性别 1:男性 0:女性
     /// - Returns: 用户信息
-    func insertUserInfo(userName: String, password: String) -> String? {
-        let values = "('\(userName)','\(password)')"
-        let statement = "insert into \(userTableName)(username, password) values \(values)"
+    func insertUserInfo(userName: String, password: String, sex: Int) -> String? {
+        let values = "('\(userName)','\(password)','\(sex)')"
+        let statement = "insert into \(userTableName)(username, password, sex) values \(values)"
         LogFile.info("执行SQL:\(statement)")
         if !mysql.query(statement: statement) {
             LogFile.error("\(statement)插入失败")

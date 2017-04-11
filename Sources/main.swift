@@ -44,18 +44,24 @@ server.setResponseFilters([(RequestLogger(),.low)])
 routes.add(method: .get, uri: "/create") { (request, response) in
     response.setHeader(.contentType, value: "text/plain;charset=utf-8")
     guard let userName = request.param(name: "username") else {
-        LogFile.error("username为nil")
-        response.setBody(string: "username为nil")
+        LogFile.error("username参数问题")
+        response.setBody(string: "username参数问题")
         response.completed()
         return
     }
     guard let password = request.param(name: "password") else {
-        LogFile.error("password为nil")
-        response.setBody(string: "password为nil")
+        LogFile.error("password参数问题")
+        response.setBody(string: "password参数问题")
         response.completed()
         return
     }
-    guard let json = UserOperator().insertUserInfo(userName: userName, password: password) else {
+    guard let sex = Int(request.param(name: "sex")!) else {
+        LogFile.error("sex参数问题")
+        response.setBody(string: "sex参数问题")
+        response.completed()
+        return
+    }
+    guard let json = UserOperator().insertUserInfo(userName: userName, password: password , sex: sex) else {
         LogFile.error("插入失败，JSON为nil")
         response.setBody(string: "插入失败，JSON为nil")
         response.completed()
@@ -69,20 +75,20 @@ routes.add(method: .get, uri: "/create") { (request, response) in
 routes.add(method: .get, uri: "/update") { (request, response) in
     response.setHeader(.contentType, value: "text/plain;charset=utf-8")
     guard let userId = request.param(name: "userid") else {
-        LogFile.error("userid为nil")
-        response.setBody(string: "userid为nil")
+        LogFile.error("userid参数问题")
+        response.setBody(string: "userid参数问题")
         response.completed()
         return
     }
     guard let userName = request.param(name: "username") else {
-        LogFile.error("username为nil")
-        response.setBody(string: "username为nil")
+        LogFile.error("username参数问题")
+        response.setBody(string: "username参数问题")
         response.completed()
         return
     }
     guard let password = request.param(name: "password") else {
-        LogFile.error("password为nil")
-        response.setBody(string: "password为nil")
+        LogFile.error("password参数问题")
+        response.setBody(string: "password参数问题")
         response.completed()
         return
     }
@@ -100,8 +106,8 @@ routes.add(method: .get, uri: "/update") { (request, response) in
 routes.add(method: .get, uri: "/delete") { (request, response) in
     response.setHeader(.contentType, value: "text/plain;charset=utf-8")
     guard let userId = request.param(name: "userid") else {
-        LogFile.error("userid为nil")
-        response.setBody(string: "userid为nil")
+        LogFile.error("userid参数问题")
+        response.setBody(string: "userid参数问题")
         response.completed()
         return
     }
@@ -119,14 +125,14 @@ routes.add(method: .get, uri: "/delete") { (request, response) in
 routes.add(method: .get, uri: "/search") { (request, response) in
     response.setHeader(.contentType, value: "text/plain;charset=utf-8")
     guard let userName = request.param(name: "username") else {
-        LogFile.error("username为nil")
-        response.setBody(string: "username为nil")
+        LogFile.error("username参数问题")
+        response.setBody(string: "username参数问题")
         response.completed()
         return
     }
     guard let password = request.param(name: "password") else {
-        LogFile.error("password为nil")
-        response.setBody(string: "password为nil")
+        LogFile.error("password参数问题")
+        response.setBody(string: "password参数问题")
         response.completed()
         return
     }

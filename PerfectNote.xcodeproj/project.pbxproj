@@ -1325,7 +1325,6 @@
 		OBJ_117 /* a_sign.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_sign.c; sourceTree = "<group>"; };
 		OBJ_118 /* a_strex.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_strex.c; sourceTree = "<group>"; };
 		OBJ_119 /* a_strnid.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_strnid.c; sourceTree = "<group>"; };
-		OBJ_12 /* ayjkwebroot */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ayjkwebroot; sourceTree = SOURCE_ROOT; };
 		OBJ_120 /* a_time.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_time.c; sourceTree = "<group>"; };
 		OBJ_121 /* a_type.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_type.c; sourceTree = "<group>"; };
 		OBJ_122 /* a_utctm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_utctm.c; sourceTree = "<group>"; };
@@ -1336,7 +1335,6 @@
 		OBJ_127 /* aes_core.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = aes_core.c; sourceTree = "<group>"; };
 		OBJ_128 /* aes_ctr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = aes_ctr.c; sourceTree = "<group>"; };
 		OBJ_129 /* aes_ecb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = aes_ecb.c; sourceTree = "<group>"; };
-		OBJ_13 /* file */ = {isa = PBXFileReference; lastKnownFileType = folder; path = file; sourceTree = SOURCE_ROOT; };
 		OBJ_130 /* aes_ige.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = aes_ige.c; sourceTree = "<group>"; };
 		OBJ_131 /* aes_misc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = aes_misc.c; sourceTree = "<group>"; };
 		OBJ_132 /* aes_ofb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = aes_ofb.c; sourceTree = "<group>"; };
@@ -3128,18 +3126,15 @@
 			path = ".build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/CZlib";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_11 /* Tests */,
-				OBJ_12 /* ayjkwebroot */,
-				OBJ_13 /* file */,
 				OBJ_14 /* Dependencies */,
 				OBJ_802 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_55 /* include */ = {
@@ -3658,7 +3653,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_802 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
